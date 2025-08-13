@@ -18,4 +18,5 @@ class RoutesName {
   static const String truckLogDetail = '/truckLogDetail-view';
   static const String manageTrucks = '/manage-trucks';
   static const String settings = '/settings';
+  static const String main = '/main';
 }

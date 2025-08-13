@@ -23,7 +23,7 @@ class TruckLogDetailView extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: Responsive.padding(left: 4, right: 4, top: 2, bottom: 4),
           child: Column(
             children: [
               Container(

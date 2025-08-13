@@ -5,6 +5,7 @@ import 'package:acl/view/change_password_view.dart';
 import 'package:acl/view/edit_truck_entry_view.dart';
 import 'package:acl/view/homeview.dart';
 import 'package:acl/view/loginview.dart';
+import 'package:acl/view/main_wrapper.dart';
 import 'package:acl/view/manage_trucks.dart';
 import 'package:acl/view/notifications_view.dart';
 import 'package:acl/view/setting_view.dart';
@@ -28,6 +29,9 @@ class Routes {
         return MaterialPageRoute(builder: (_) => Homeview());
       case RoutesName.truckLog:
         return MaterialPageRoute(builder: (_) => TruckLogView());
+
+      case RoutesName.main:
+        return MaterialPageRoute(builder: (_) => MainScreen());
       case RoutesName.truckLogDetail:
         return MaterialPageRoute(builder: (_) => TruckLogDetailView());
       case RoutesName.manageTrucks:

@@ -29,30 +29,33 @@ class SettingView extends StatelessWidget {
                     colors: [Color(0xFF4EEED0), Color(0xFF111B19)],
                   ), // Apply the gradient here
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Settings",
-                      style: GoogleFonts.rethinkSans(
-                        color: AppColor.whiteColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: Responsive.textScaleFactor * 26,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: AppColor.whiteColor.withValues(alpha: 0.2),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: SvgPicture.asset(
-                          "assets/icons/notificsation.svg",
+                child: Padding(
+                  padding: Responsive.padding(left: 4, right: 4, top: 2),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Settings",
+                        style: GoogleFonts.rethinkSans(
+                          color: AppColor.whiteColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: Responsive.textScaleFactor * 26,
                         ),
                       ),
-                    ),
-                  ],
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.whiteColor.withValues(alpha: 0.2),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: SvgPicture.asset(
+                            "assets/icons/notificsation.svg",
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Expanded(

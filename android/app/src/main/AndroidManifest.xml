@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="acl"
+        android:label="ACL Exavation"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

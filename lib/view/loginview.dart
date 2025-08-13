@@ -17,47 +17,50 @@ class Loginview extends StatelessWidget {
       backgroundColor: AppColor.secondaryColor,
       body: Padding(
         padding: const EdgeInsets.all(0.0),
-        child: Column(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    center: Alignment.topRight,
-                    radius: 0.6,
-                    focalRadius: 0.1,
-                    colors: [Color(0xFF4EEED0), Color(0xFF111B19)],
-                  ), // Apply the gradient here
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SvgPicture.asset("assets/images/login.svg"),
-                    Text(
-                      "Login to your account",
-                      style: GoogleFonts.rethinkSans(
-                        fontSize: Responsive.textScaleFactor * 36,
-                        color: AppColor.whiteColor,
-                        fontWeight: FontWeight.bold,
-                      ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                constraints: BoxConstraints(maxHeight: Responsive.h(50)),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                      center: Alignment.topRight,
+                      radius: 0.6,
+                      focalRadius: 0.1,
+                      colors: [Color(0xFF4EEED0), Color(0xFF111B19)],
+                    ), // Apply the gradient here
+                  ),
+                  child: Padding(
+                    padding: Responsive.padding(left: 4, right: 4, top: 2),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SvgPicture.asset("assets/images/login.svg"),
+                        Text(
+                          "Login to your account",
+                          style: GoogleFonts.rethinkSans(
+                            fontSize: Responsive.textScaleFactor * 36,
+                            color: AppColor.whiteColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "login to explore about our app",
+                          style: GoogleFonts.rethinkSans(
+                            color: AppColor.whiteColor,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ],
                     ),
-                    Text(
-                      "login to explore about our app",
-                      style: GoogleFonts.rethinkSans(
-                        color: AppColor.whiteColor,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              flex: 3,
-              child: Container(
+              Container(
+                constraints: BoxConstraints(maxHeight: Responsive.h(60)),
                 decoration: BoxDecoration(
                   color: AppColor.whiteColor,
                   borderRadius: BorderRadius.only(
@@ -163,7 +166,7 @@ class Loginview extends StatelessWidget {
                       GestureDetector(
                         onTap: () => Navigator.pushReplacementNamed(
                           context,
-                          RoutesName.home,
+                          RoutesName.main,
                         ),
                         child: Container(
                           width: double.infinity,
@@ -244,8 +247,8 @@ class Loginview extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
